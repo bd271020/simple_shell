@@ -45,20 +45,12 @@ ssize_t input_buf(info_t *info, char **buf, size_t *len)
 }
 
 /**
-<<<<<<< HEAD
  * getinput - gets a line without newline
-=======
- * get_input - gets a line minus the newline
->>>>>>> f03810d933cb55eda3c92991149229415fe05dde
  * @info: parameter struct
  *
  * Return: bytes read
  */
-<<<<<<< HEAD
 ssize_t _getinput(info_t *info)
-=======
-ssize_t get_input(info_t *info)
->>>>>>> f03810d933cb55eda3c92991149229415fe05dde
 {
 	static char *buf; /* the ';' command chain buffer */
 	static size_t i, j, len;
@@ -98,22 +90,14 @@ ssize_t get_input(info_t *info)
 }
 
 /**
-<<<<<<< HEAD
  * bufreader - reads a buffer
-=======
- * read_buf - reads a buffer
->>>>>>> f03810d933cb55eda3c92991149229415fe05dde
  * @info: parameter struct
  * @buf: buffer
  * @i: size
  *
  * Return: r
  */
-<<<<<<< HEAD
 ssize_t bufreader(info_t *info, char *buf, size_t *i)
-=======
-ssize_t read_buf(info_t *info, char *buf, size_t *i)
->>>>>>> f03810d933cb55eda3c92991149229415fe05dde
 {
 	ssize_t r = 0;
 
@@ -126,22 +110,14 @@ ssize_t read_buf(info_t *info, char *buf, size_t *i)
 }
 
 /**
-<<<<<<< HEAD
  * get_line - gets the next line of input from STDIN
-=======
- * _getline - gets the next line of input from STDIN
->>>>>>> f03810d933cb55eda3c92991149229415fe05dde
  * @info: parameter struct
  * @ptr: address of pointer to buffer, preallocated or NULL
  * @length: size of preallocated ptr buffer if not NULL
  *
  * Return: s
  */
-<<<<<<< HEAD
 int get_line(info_t *info, char **ptr, size_t *length)
-=======
-int _getline(info_t *info, char **ptr, size_t *length)
->>>>>>> f03810d933cb55eda3c92991149229415fe05dde
 {
 	static char buf[READ_BUF_SIZE];
 	static size_t i, len;
@@ -155,11 +131,7 @@ int _getline(info_t *info, char **ptr, size_t *length)
 	if (i == len)
 		i = len = 0;
 
-<<<<<<< HEAD
 	r = bufreader(info, buf, &len);
-=======
-	r = read_buf(info, buf, &len);
->>>>>>> f03810d933cb55eda3c92991149229415fe05dde
 	if (r == -1 || (r == 0 && len == 0))
 		return (-1);
 
@@ -185,26 +157,14 @@ int _getline(info_t *info, char **ptr, size_t *length)
 }
 
 /**
-<<<<<<< HEAD
  * _sigintHandler - blocks ctrl-C
-=======
- * sigintHandler - blocks ctrl-C
->>>>>>> f03810d933cb55eda3c92991149229415fe05dde
  * @sig_num: the signal number
  *
  * Return: void
  */
-<<<<<<< HEAD
 void _sigintHandler(__attribute__((unused))int sig_num)
-=======
-void sigintHandler(__attribute__((unused))int sig_num)
->>>>>>> f03810d933cb55eda3c92991149229415fe05dde
 {
 	_puts("\n");
 	_puts("$ ");
 	_putchar(BUF_FLUSH);
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> f03810d933cb55eda3c92991149229415fe05dde
