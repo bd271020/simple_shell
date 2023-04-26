@@ -184,8 +184,13 @@ int _myalias(info_t *);
 
 /*toem_getline.c */
 ssize_t get_input(info_t *);
+<<<<<<< HEAD
 int get_line(info_t *, char **, size_t *);
 void _sigintHandler(int);
+=======
+int _getline(info_t *, char **, size_t *);
+void sigintHandler(int);
+>>>>>>> f03810d933cb55eda3c92991149229415fe05dde
 
 /* toem_getinfo.c */
 void clear_info(info_t *);
@@ -233,3 +238,7 @@ int replace_vars(info_t *);
 int replace_string(char **, char *);
 
 #endif
+<<<<<<< HEAD
+=======
+
+>>>>>>> f03810d933cb55eda3c92991149229415fe05dde
